@@ -88,7 +88,7 @@
         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         bind:value={email}
       />
-      <span class="text-xs text-ebony-300 flex gap-1 align-center">
+      <span class="text-sm text-ebony-300 flex gap-1 items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 9h.01" /><path d="M11 12h1v4h1" /></svg>
         {t('comments_email_note_optional_not_published')}
       </span>
@@ -116,7 +116,7 @@
       disabled={loading}
       type="submit"
       on:click={addComment}>
-      <span class="flex gap-2 align-end self-start">
+      <span class="flex gap-2 items-end self-start">
         {loading ? t('comments_sending_comment') : t('comments_submit_button')}
         {#if loading}
           {@html loader()}
