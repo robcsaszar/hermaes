@@ -19,17 +19,17 @@
 
   async function addComment() {
     if (!content) {
-      alert(t('content_is_required'))
+      alert(t('comments_comment_error_required'))
       return
     }
 
     if (!nickname) {
-      alert(t('nickname_is_required'))
+      alert(t('comments_display_name_error_required'))
       return
     }
 
     if (email && !/[^@\s]+@[^@\s]+\.[^@\s]+/.test(email)) {
-      alert(t('invalid_email'))
+      alert(t('comments_email_note_email_not_correct_format'))
       return
     }
 
@@ -47,7 +47,7 @@
       })
       await refresh()
       teardown()
-      setMessage(t('comment_has_been_sent'))
+      setMessage(t('comments_submit_success'))
     } finally {
       loading = false
     }
