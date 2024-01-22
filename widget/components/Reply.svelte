@@ -81,7 +81,6 @@
     </label>
     <label class="flex flex-col gap-1">
       <span>{t('comments_email_label')}</span>
-      <span class="text-xs text-ebony-300">{t('comments_email_note_optional_not_published')}</span>
       <input
         name="email"
         class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
@@ -90,6 +89,7 @@
         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         bind:value={email}
       />
+      <span class="text-xs text-ebony-300">{t('comments_email_note_optional_not_published')}</span>
     </label>
   </fieldset>
 
