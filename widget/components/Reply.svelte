@@ -28,6 +28,11 @@
       return
     }
 
+    if (email && !/[^@\s]+@[^@\s]+\.[^@\s]+/.test(email)) {
+      alert(t('invalid_email'))
+      return
+    }
+
     try {
       loading = true
       const res = await api.post('/api/open/comments', {
@@ -61,31 +66,32 @@
 
 </script>
 
-<div class="flex flex-col gap-4">
-  <div class="flex gap-4 flex-wrap">
+<form class="flex flex-col gap-4">
+  <fieldset class="flex gap-4 flex-wrap">
     <label class="flex flex-col gap-1">
-      <span>{t('nickname')}</span>
+      <span>{t('comments_display_name_label')}</span>
       <input
         required
         name="nickname"
         class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
         type="text"
-        title={t('nickname')}
+        placeholder={t('comments_display_name_placeholder')}
         bind:value={nickname}
       />
     </label>
     <label class="flex flex-col gap-1">
-      <span>{t('email')}</span>
+      <span>{t('comments_email_label')}</span>
+      <span class="text-xs text-ebony-300">{t('comments_email_note_optional_not_published')}</span>
       <input
         name="email"
         class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
         type="email"
-        title={t('email')}
+        placeholder={t('comments_email_placeholder')}
         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         bind:value={email}
       />
     </label>
-  </div>
+  </fieldset>
 
   <label class="flex flex-col gap-1">
     <span>{t('reply_placeholder')}</span>
@@ -104,12 +110,13 @@
     <button
       class="rounded-md bg-ebony py-2 px-4 font-semibold text-wheatfield-50 disabled:cursor-not-allowed disabled:opacity-50"
       disabled={loading}
+      type="submit"
       on:click={addComment}>
-      <span>
-        {loading ? t('sending') : t('comments_submit_button')}
+      <span class="flex gap-1">
+        {loading ? t('comments_loading_comments') : t('comments_submit_button')}
         {#if loading}
           {@html loader()}
         {/if}
       </span>
     </button>
-</div>
+</form>
