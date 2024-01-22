@@ -112,11 +112,11 @@
   </fieldset>
 
     <button
-      class="rounded-md bg-ebony py-2 px-4 font-semibold text-wheatfield-50 disabled:cursor-not-allowed disabled:opacity-50"
+      class="rounded-md bg-ebony py-2 px-4 font-semibold text-wheatfield-50 disabled:cursor-not-allowed disabled:opacity-50 self-start"
       disabled={loading}
       type="submit"
       on:click={addComment}>
-      <span class="flex gap-2 items-end self-start">
+      <span class="flex gap-2 items-end">
         {loading ? t('comments_sending_comment') : t('comments_submit_button')}
         {#if loading}
           {@html loader()}
