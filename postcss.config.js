@@ -1,6 +1,3 @@
-import colors from 'tailwindcss/colors'
-import defaultTheme from 'tailwindcss/defaultTheme'
-
 module.exports = {
   plugins: {
     tailwindcss: {
@@ -99,11 +96,6 @@ module.exports = {
             transparent: 'transparent',
             current: 'currentColor',
             background: '#F0F1E9',
-            white: colors.white,
-            slate: colors.slate,
-            rose: colors.rose,
-            emerald: colors.emerald,
-            sky: colors.sky,
             primary: {
               dark: '#110D1C',
               light: '#F0F1E9',
@@ -134,9 +126,6 @@ module.exports = {
               800: '#483A2D',
               900: '#16110E',
             },
-          },
-          fontFamily: {
-            sans: ['InterVariable', 'Inter', ...defaultTheme.fontFamily.sans],
           },
         },
       },
