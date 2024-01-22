@@ -57,112 +57,50 @@
 
 </script>
 
-<div class="grid grid-cols-1 gap-4">
-  <div class="grid grid-cols-2 gap-4">
-    <div class="px-1">
-      <label class="mb-2 block dark:text-gray-200" for="nickname">{t('nickname')}</label>
+<div class="flex flex-col gap-4">
+  <div class="flex gap-4 flex-wrap">
+    <label class="flex flex-col gap-1">
+      <span>{t('nickname')}</span>
       <input
+        required
         name="nickname"
-        class="rounded-md w-full p-2 border-2 border-[#e6e4d6] bg-white dark:text-gray-100 dark:outline-none"
+        class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
         type="text"
         title={t('nickname')}
         bind:value={nickname}
       />
-    </div>
-    <div class="px-1">
-      <label class="mb-2 block dark:text-gray-200" for="email">{t('email')}</label>
+    </label>
+    <label class="flex flex-col gap-1">
+      <span>{t('email')}</span>
       <input
         name="email"
-        class="rounded-md w-full p-2 border-2 border-[#e6e4d6] bg-white  dark:text-gray-100 dark:outline-none"
+        class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
         type="email"
         title={t('email')}
+        pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         bind:value={email}
       />
-    </div>
+    </label>
   </div>
 
-  <div class="px-1">
-    <label class="mb-2 block dark:text-gray-200" for="reply_content">{t('reply_placeholder')}</label>
+  <label class="flex flex-col gap-1">
+    <span>{t('reply_placeholder')}</span>
     <textarea
+      required
       name="reply_content"
-      class="rounded-md w-full p-2 border-2 border-[#e6e4d6] bg-white h-24 dark:text-gray-100 dark:outline-none"
+      rows="5"
+      autocorrect="off"
+      spellcheck="false"
+      class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
       title={t('reply_placeholder')}
       bind:value={content}
     />
-  </div>
+  </label>
 
-  <div class="px-1">
     <button
-
-      class="rounded-md py-2 px-4 font-semibold text-[#f8f8f9] bg-[#110d1c] font-bold dark:bg-transparent dark:border dark:border-gray-100"
-      class:cusdis-disabled={loading}
-      on:click={addComment}>{loading ? t('sending') : t('post_comment')}</button
-    >
-  </div>
+      class="rounded-md bg-ebony py-2 px-4 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+      disabled={loading}
+      on:click={addComment}>
+      <span>{loading ? t('sending') : t('post_comment')}</span>
+    </button>
 </div>
-
-<style>
-  /* textarea,
-  input {
-    width: 100%;
-    border: 2px solid;
-    color: var(--cusdis--color-text-default);
-    border-color: var(--cusdis--color-input-border);
-    background: none;
-    padding: 0.5em;
-    border-radius: 4px;
-    outline: none;
-    font-family: inherit;
-    box-sizing: border-box;
-    font-size: 1em;
-  }
-
-  textarea {
-    height: 5em;
-    outline: none;
-  }
-
-  .cusdis-disabled {
-    background-color: var(--cusdis--color-btn-bg-disabled);
-    cursor: not-allowed;
-  }
-
-  .cusdis-reply-info {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-column-gap: 0.5em;
-  }
-
-  @media only screen and (max-width: 767px) {
-    .cusdis-reply-info {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      grid-row-gap: 0.5em;
-    }
-  }
-
-  .submit-btn {
-    background-color: var(--cusdis--color-btn-bg-default);
-    color: var(--cusdis--color-btn-text);
-    border-radius: 0;
-    border: var(--cusdis--color-btn-border);
-    padding: 0.5em 1em;
-    cursor: pointer;
-    border-radius: 2px;
-    font-family: inherit;
-    font-size: 1em;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0;
-    text-shadow: none;
-    font: inherit;
-    font-weight: bold;
-    align-items: center;
-  }
-
-  .cusdis-field {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  } */
-
-</style>

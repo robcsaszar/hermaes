@@ -98,15 +98,11 @@
         {message}
       </div>
     {/if}
-
     <Reply />
-
-    <div class="my-8" />
-
     <div class="mt-4 px-1">
       {#if loadingComments}
         <div class="text-gray-900 dark:text-gray-100">
-          {t('loading')}...
+          {t('loading')}
         </div>
       {:else}
         {#each commentsResult.data as comment (comment.id)}
@@ -124,12 +120,6 @@
           </div>
         {/if}
       {/if}
-    </div>
-
-    <div class="my-8" />
-
-    <div class="text-center text-gray-500 dark:text-gray-100 text-xs">
-      <a class="underline " href="https://cusdis.com">{t('powered_by')}</a>
     </div>
   </div>
 {/if}
