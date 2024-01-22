@@ -1,3 +1,6 @@
+import colors from 'tailwindcss/colors'
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 module.exports = {
   plugins: {
     tailwindcss: {
@@ -131,6 +134,9 @@ module.exports = {
               800: '#483A2D',
               900: '#16110E',
             },
+          },
+          fontFamily: {
+            sans: ['InterVariable', 'Inter', ...defaultTheme.fontFamily.sans],
           },
         },
       },
