@@ -63,7 +63,7 @@
       <label class="mb-2 block dark:text-gray-200" for="nickname">{t('nickname')}</label>
       <input
         name="nickname"
-        class="w-full p-2 border border-gray-200 bg-transparent dark:text-gray-100 dark:outline-none"
+        class="rounded-md w-full p-2 border-2 border-[#e6e4d6] bg-white dark:text-gray-100 dark:outline-none"
         type="text"
         title={t('nickname')}
         bind:value={nickname}
@@ -73,7 +73,7 @@
       <label class="mb-2 block dark:text-gray-200" for="email">{t('email')}</label>
       <input
         name="email"
-        class="w-full p-2 border border-gray-200 bg-transparent  dark:text-gray-100 dark:outline-none"
+        class="rounded-md w-full p-2 border-2 border-[#e6e4d6] bg-white  dark:text-gray-100 dark:outline-none"
         type="email"
         title={t('email')}
         bind:value={email}
@@ -85,7 +85,7 @@
     <label class="mb-2 block dark:text-gray-200" for="reply_content">{t('reply_placeholder')}</label>
     <textarea
       name="reply_content"
-      class="w-full p-2 border border-gray-200 h-24 bg-transparent dark:text-gray-100 dark:outline-none"
+      class="rounded-md w-full p-2 border-2 border-[#e6e4d6] bg-white h-24 dark:text-gray-100 dark:outline-none"
       title={t('reply_placeholder')}
       bind:value={content}
     />
@@ -94,7 +94,7 @@
   <div class="px-1">
     <button
 
-      class="text-sm bg-gray-200 p-2 px-4 font-bold dark:bg-transparent dark:border dark:border-gray-100"
+      class="rounded-md py-2 px-4 font-semibold text-[#f8f8f9] bg-[#110d1c] font-bold dark:bg-transparent dark:border dark:border-gray-100"
       class:cusdis-disabled={loading}
       on:click={addComment}>{loading ? t('sending') : t('post_comment')}</button
     >
