@@ -116,6 +116,7 @@
       on:click={addComment}>
       <span class="flex gap-1">
         {loading ? t('comments_loading_comments') : t('comments_submit_button')}
+        {@html loader()}
         {#if loading}
           {@html loader()}
         {/if}
