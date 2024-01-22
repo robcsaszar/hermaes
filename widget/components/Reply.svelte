@@ -92,7 +92,7 @@
     <textarea
       required
       name="reply_content"
-      rows="5"
+      rows="4"
       autocorrect="off"
       spellcheck="false"
       class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
@@ -107,7 +107,9 @@
       on:click={addComment}>
       <span>
         {loading ? t('sending') : t('comments_submit_button')}
-        {loading && loader()}
+        {#if loading}
+          {@html loader()}
+        {/if}
       </span>
     </button>
 </div>
