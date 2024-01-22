@@ -72,7 +72,7 @@
       <input
         required
         name="nickname"
-        class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
+        class="rounded-md w-full bg-white px-2 py-1 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
         type="text"
         placeholder={t('comments_display_name_placeholder')}
         bind:value={nickname}
@@ -82,7 +82,7 @@
       <span>{t('comments_email_label')}</span>
       <input
         name="email"
-        class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
+        class="rounded-md w-full bg-white px-2 py-1 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
         type="email"
         placeholder={t('comments_email_placeholder')}
         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
@@ -104,8 +104,8 @@
         rows="4"
         autocorrect="off"
         spellcheck="false"
-        class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
-        title={t('comments_comment_placeholder')}
+        class="rounded-md w-full bg-white px-2 py-1 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
+        placeholder={t('comments_comment_placeholder')}
         bind:value={content}
       />
     </label>
