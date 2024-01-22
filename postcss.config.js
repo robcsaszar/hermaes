@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     tailwindcss: {
-      content: ['widget/**/*.{svelte}'],
+      content: ['widget/**/*.svelte'],
       theme: {
         fontSize: {
           xs: [
