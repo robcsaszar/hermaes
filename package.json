@@ -40,7 +40,6 @@
     "@sendgrid/mail": "^7.4.2",
     "@sentry/node": "^6.3.1",
     "@sentry/tracing": "^6.3.1",
-    "@fontsource-variable/inter": "^5.0.15",
     "autoprefixer": "^10.2.5",
     "axios": "^0.21.1",
     "class-validator": "^0.13.1",

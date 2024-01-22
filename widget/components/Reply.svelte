@@ -55,6 +55,10 @@
     onSuccess && onSuccess()
   }
 
+  function loader() {
+    return `<div class="leap-frog"><div class="leap-frog__dot"></div><div class="leap-frog__dot"></div><div class="leap-frog__dot"></div></div>`
+  }
+
 </script>
 
 <div class="flex flex-col gap-4">
@@ -98,9 +102,12 @@
   </label>
 
     <button
-      class="rounded-md bg-ebony py-2 px-4 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+      class="rounded-md bg-ebony py-2 px-4 font-semibold text-wheatfield-50 disabled:cursor-not-allowed disabled:opacity-50"
       disabled={loading}
       on:click={addComment}>
-      <span>{loading ? t('sending') : t('post_comment')}</span>
+      <span>
+        {loading ? t('sending') : t('comments_submit_button')}
+        {loading && loader()}
+      </span>
     </button>
 </div>

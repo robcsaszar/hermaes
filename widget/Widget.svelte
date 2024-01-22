@@ -92,7 +92,7 @@
 </script>
 
 {#if !error}
-  <div class="p-1">
+  <div class="p-1 text-ebony-400">
     {#if message}
       <div class="p-2 mb-4 bg-blue-500 text-white">
         {message}
