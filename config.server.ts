@@ -16,12 +16,12 @@ if (resolvedConfig.useLocalAuth) {
         username: {
           label: 'Username',
           type: 'text',
-          placeholder: 'env: USERNAME',
+          placeholder: 'Plesae enter your username',
         },
         password: {
           label: 'Password',
           type: 'password',
-          placeholder: 'env: PASSWORD',
+          placeholder: 'Plesae enter your password',
         },
       },
       async authorize(credentials: { username: string; password: string }) {
@@ -66,7 +66,7 @@ if (resolvedConfig.useGitlab) {
     Providers.GitLab({
       clientId: process.env.GITLAB_ID,
       clientSecret: process.env.GITLAB_SECRET,
-    })
+    }),
   )
 }
 
