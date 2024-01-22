@@ -93,19 +93,21 @@
     </label>
   </fieldset>
 
-  <label class="flex flex-col gap-1">
-    <span>{t('reply_placeholder')}</span>
-    <textarea
-      required
-      name="reply_content"
-      rows="4"
-      autocorrect="off"
-      spellcheck="false"
-      class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
-      title={t('reply_placeholder')}
-      bind:value={content}
-    />
-  </label>
+  <fieldset>
+    <label class="flex flex-col gap-1">
+      <span>{t('reply_placeholder')}</span>
+      <textarea
+        required
+        name="reply_content"
+        rows="4"
+        autocorrect="off"
+        spellcheck="false"
+        class="rounded-md w-full bg-white p-2 text-ebony-300 outline-none ring-2 ring-wheatfield-400 transition-shadow duration-300 placeholder:opacity-50 placeholder:transition-opacity placeholder:duration-500 focus:ring-wheatfield-600 focus:placeholder:opacity-0"
+        title={t('reply_placeholder')}
+        bind:value={content}
+      />
+    </label>
+  </fieldset>
 
     <button
       class="rounded-md bg-ebony py-2 px-4 font-semibold text-wheatfield-50 disabled:cursor-not-allowed disabled:opacity-50"
