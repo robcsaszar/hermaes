@@ -117,8 +117,7 @@
       type="submit"
       on:click={addComment}>
       <span class="flex gap-2 align-end self-start">
-        {loading ? t('comments_loading_comments') : t('comments_submit_button')}
-        {@html loader()}
+        {loading ? t('comments_sending_comment') : t('comments_submit_button')}
         {#if loading}
           {@html loader()}
         {/if}
