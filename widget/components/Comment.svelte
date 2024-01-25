@@ -19,22 +19,22 @@
   class:cusdis-indicator={showIndicator}
 >
   <div class="flex items-center">
-    <div class="mr-2 font-medium dark:text-gray-100">
+    <div class="mr-2 font-medium">
       {comment.moderator && comment.moderator.displayName ? comment.moderator.displayName : comment.by_nickname}
     </div>
 
     {#if comment.moderatorId}
-      <div class="mr-2 dark:bg-gray-500 bg-gray-200 text-xs py-0.5 px-1 rounded dark:text-gray-100">
+      <div class="mr-2 bg-gray-200 text-xs py-0.5 px-1 rounded">
         <span>{t('mod_badge')}</span>
       </div>
     {/if}
   </div>
 
-  <div class="text-gray-500 text-sm dark:text-gray-400">
+  <div class="text-gray-500 text-sm ">
     {comment.parsedCreatedAt}
   </div>
 
-  <div class="text-gray-500 my-2 dark:text-gray-200">
+  <div class="text-gray-500 my-2">
     {@html comment.parsedContent}
   </div>
 
@@ -46,7 +46,7 @@
 
   <div>
     <button
-      class="font-medium text-sm text-gray-500 dark:bg-transparent dark:text-gray-100"
+      class="font-medium text-sm text-gray-500"
       type="button"
       on:click={(_) => {
         showReplyForm = !showReplyForm
